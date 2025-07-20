@@ -1,0 +1,108 @@
+POST http://localhost:3500/api/courses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODZmYTdlMTdiOGU4MTdiZTRkMWVkNTgiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6InVnb2NodWt3dW1lc2hhY2g4QGdtYWlsLmNvbSIsIm5hbWUiOiJVZ29jaHVrd3UgTWVzaGFjaCIsImlhdCI6MTc1MjE0OTE5NywiZXhwIjoxNzUyMjM1NTk3fQ.n-d6q_PJDY1f9hbGK9Wnm19uiXAk5aaXD914HtwUIdA
+Content-Type: application/json
+
+{
+  "title": "JavaScript for Beginners",
+  "description": "Learn JavaScript from scratch including ES6+ features.",
+  "videos": [
+    {
+      "title": "Introduction to JavaScript",
+      "url": "https://example.com/video1"
+    },
+    {
+      "title": "Variables and Data Types",
+      "url": "https://example.com/video2"
+    }
+  ],
+  "materials": [
+    {
+      "title": "MDN JavaScript Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    }
+  ]
+}
+### REGISTER ADMIN
+POST https://sage-api-4.onrender.com/api/users
+Content-Type: application/json
+
+{
+  "name": "Ugochukwu Meshach",
+  "email": "ugochukwumeshach8@gmail.com",
+  "password": "ugoadmin",
+  "role": "admin"
+}
+
+
+
+### LOGIN
+POST https://sage-api-4.onrender.com/api/auth
+Content-Type: application/json
+
+{
+  "email": "ugochukwumeshach8@gmail.com",
+  "password": "ugoadmin"
+}
+
+
+###
+GET https://sage-api-4.onrender.com/api/stats/overview
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODZmYTdlMTdiOGU4MTdiZTRkMWVkNTgiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6InVnb2NodWt3dW1lc2hhY2g4QGdtYWlsLmNvbSIsIm5hbWUiOiJVZ29jaHVrd3UgTWVzaGFjaCIsImlhdCI6MTc1MjE0OTc0NywiZXhwIjoxNzUyMjM2MTQ3fQ.1gcAtivEROk3fcHXEENo0U2XoEf-jnNYrhyntsoonz4
+Content-Type: application/json
+
+
+###GET https://sage-api-4.onrender.com/api/stats/courses
+GET https://sage-api-4.onrender.com/api/stats/user/686fa7e17b8e817be4d1ed58
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODZmYTdlMTdiOGU4MTdiZTRkMWVkNTgiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6InVnb2NodWt3dW1lc2hhY2g4QGdtYWlsLmNvbSIsIm5hbWUiOiJVZ29jaHVrd3UgTWVzaGFjaCIsImlhdCI6MTc1MjE0OTc0NywiZXhwIjoxNzUyMjM2MTQ3fQ.1gcAtivEROk3fcHXEENo0U2XoEf-jnNYrhyntsoonz4
+Content-Type: application/json
+
+
+
+### ENROLL IN COURSE
+POST  https://sage-api-4.onrender.com/api/enrollments/686fadca41e0e68518637864
+Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODZmYTdlMTdiOGU4MTdiZTRkMWVkNTgiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6InVnb2NodWt3dW1lc2hhY2g4QGdtYWlsLmNvbSIsIm5hbWUiOiJVZ29jaHVrd3UgTWVzaGFjaCIsImlhdCI6MTc1MjE0OTE5NywiZXhwIjoxNzUyMjM1NTk3fQ.n-d6q_PJDY1f9hbGK9Wnm19uiXAk5aaXD914HtwUIdA
+Content-Type: application/json
+
+
+
+### Submit Feedback
+POST http://localhost:3500/api/feedback/686fadca41e0e68518637864
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODZmYTdlMTdiOGU4MTdiZTRkMWVkNTgiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6InVnb2NodWt3dW1lc2hhY2g4QGdtYWlsLmNvbSIsIm5hbWUiOiJVZ29jaHVrd3UgTWVzaGFjaCIsImlhdCI6MTc1MjI1NDA4MSwiZXhwIjoxNzUyMzQwNDgxfQ.f06K6VoR7_3A_g1Qj4JG3ukiQwmNETFzKPxb61fV0Fo
+Content-Type: application/json
+
+{
+  "comment": "Great course! Very well explained.",
+  "rating": 5
+}
+
+
+### Get All Users (Admin Only)
+GET http://localhost:3500/api/admin/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODZmYTdlMTdiOGU4MTdiZTRkMWVkNTgiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6InVnb2NodWt3dW1lc2hhY2g4QGdtYWlsLmNvbSIsIm5hbWUiOiJVZ29jaHVrd3UgTWVzaGFjaCIsImlhdCI6MTc1MjI1NDA4MSwiZXhwIjoxNzUyMzQwNDgxfQ.f06K6VoR7_3A_g1Qj4JG3ukiQwmNETFzKPxb61fV0Fo
+
+
+
+
+
+
+### Update Course
+PUT http://localhost:3500/api/admin/courses/686fadca41e0e68518637864
+Authorization: Bearer {{ADMIN_JWT_TOKEN}}
+Content-Type: application/json
+
+{
+  "title": "Advanced JavaScript",
+  "description": "Deep dive into closures, prototypes, and async JS.",
+  "videos": [
+    {
+      "title": "Closures in JS",
+      "url": "https://example.com/closure"
+    }
+  ],
+  "materials": [
+    {
+      "title": "Advanced JS Guide",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+    }
+  ]
+}

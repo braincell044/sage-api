@@ -40,4 +40,5 @@ function validateUser(user) {
 
   return schema.validate(user);
 }
+
 export { User, validateUser };
